@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ammie's Touch | Nails &amp; Braids, Lagos</title>
+<meta name="description" content="Ammie's Touch — luxury press-on nails and braiding studio in Lagos. Book your appointment online.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animations.css">
+<style>
+  .hero-float-icon-pulse {
+    animation: floatIconPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes floatIconPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.45); }
+    50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-float-icon-pulse { animation: none; }
+  }
+  .booking-scarcity-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8F4C54;
+    background: #FBF1F0;
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    border-radius: 999px;
+    padding: 12px 22px;
+    margin: -20px auto 32px;
+    max-width: 560px;
+  }
+  .booking-scarcity-icon {
+    color: #C9A227;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body class="font-body bg-ivory text-espresso antialiased">
+
+<div id="loading-screen">
+  <div class="loader-frame">
+    <svg class="loader-ornament" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 20 Q 20 2, 38 20 T 74 20" stroke="url(#loaderGrad)" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M118 20 Q 100 38, 82 20 T 46 20" stroke="url(#loaderGrad)" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="60" cy="20" r="3" fill="#C9A227"/>
+      <defs>
+        <linearGradient id="loaderGrad" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C9A227"/>
+          <stop offset="1" stop-color="#C97B84"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <p class="loader-name">Ammie's Touch</p>
+    <p class="loader-tag">nails &amp; braids, done beautifully</p>
+  </div>
+</div>
+
+<div id="scroll-progress" class="scroll-progress"></div>
+
+<nav id="site-nav" class="site-nav">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="#home" class="nav-logo">
+      <svg class="brand-glyph" width="30" height="30" viewBox="0 0 40 40" fill="none">
+        <path d="M8 32C8 32 8 20 20 20C32 20 32 8 32 8" stroke="#B5636C" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M8 8C8 8 8 20 20 20C32 20 32 32 32 32" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="20" cy="20" r="2.6" fill="#C9A227"/>
+      </svg>
+      <span class="nav-logo-text">Ammie's <em>Touch</em></span>
+    </a>
+
+    <ul class="nav-links hidden lg:flex items-center gap-9">
+      <li><a href="#services" class="nav-link" data-nav>Services</a></li>
+      <li><a href="#nails" class="nav-link" data-nav>Nails</a></li>
+      <li><a href="#braiding" class="nav-link" data-nav>Braiding</a></li>
+      <li><a href="#pricing" class="nav-link" data-nav>Pricing</a></li>
+      <li><a href="#gallery" class="nav-link" data-nav>Gallery</a></li>
+      <li><a href="#faq" class="nav-link" data-nav>FAQ</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+    </ul>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="#booking" class="btn-nav-cta">Book Appointment</a>
+    </div>
+
+    <button id="menu-toggle" class="lg:hidden hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="flex flex-col gap-1 px-6 py-6">
+      <li><a href="#services" class="mobile-link" data-nav>Services</a></li>
+      <li><a href="#nails" class="mobile-link" data-nav>Nails</a></li>
+      <li><a href="#braiding" class="mobile-link" data-nav>Braiding</a></li>
+      <li><a href="#pricing" class="mobile-link" data-nav>Pricing</a></li>
+      <li><a href="#gallery" class="mobile-link" data-nav>Gallery</a></li>
+      <li><a href="#faq" class="mobile-link" data-nav>FAQ</a></li>
+      <li><a href="#contact" class="mobile-link" data-nav>Contact</a></li>
+      <li class="pt-3"><a href="#booking" class="btn-nav-cta w-full text-center">Book Appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+
+  <span class="hero-sparkle hero-sparkle-1">✦</span>
+  <span class="hero-sparkle hero-sparkle-2">✦</span>
+  <span class="hero-sparkle hero-sparkle-3">✦</span>
+  <span class="hero-sparkle hero-sparkle-4">✦</span>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center pt-36 pb-24 lg:pt-44 lg:pb-32">
+
+      <div class="hero-copy" data-reveal>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9H22L16 13.5L18 21L12 16.5L6 21L8 13.5L2 9H9.5L12 2Z" fill="#C9A227"/></svg>
+          <span> Most Trusted Nails &amp; Braids Studio</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title">
+          Beauty that feels
+          <span class="hero-title-script">as good</span>
+          as it looks.
+        </h1>
+
+        <p class="hero-desc">
+          From luxury press-on nails to flawlessly laid braids —
+          every appointment at Ammie's Touch is crafted around you.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mt-9">
+          <a href="#booking" class="btn-primary btn-magnetic btn-shimmer" data-magnetic>
+            Book Appointment
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#services" class="btn-secondary">View Services</a>
+          <a href="https://wa.me/2348081156211" target="_blank" rel="noopener" class="btn-whatsapp-inline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.44-1.35a9.9 9.9 0 004.6 1.14h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.15c-.24.68-1.4 1.32-1.94 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.91-1.26-4.81-4.19-4.96-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.36.76-.36h.55c.18 0 .42-.02.65.5.24.55.82 1.9.9 2.04.07.14.12.3.02.49-.1.19-.15.3-.3.46-.14.16-.3.36-.43.48-.14.13-.29.28-.13.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.45.12.61-.08.16-.2.7-.83.9-1.11.19-.28.38-.23.63-.14.26.1 1.62.77 1.9.91.27.14.46.2.53.32.07.11.07.66-.17 1.33z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter data-target="130">0</span>
+            <span class="hero-stat-plus">+</span>
+            <span class="hero-stat-label">Happy Clients</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter data-target="4">0</span>
+            <span class="hero-stat-plus" style="font-size:1.4rem;">.9</span>
+            <span class="hero-stat-label">Average Rating</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter data-target="3">0</span>
+            <span class="hero-stat-label">Years of Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal data-reveal-delay="150">
+        <div class="hero-visual-frame">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&q=80" alt="Luxury manicured hands with press-on nails" class="hero-visual-img" loading="eager">
+
+          <div class="hero-float-card hero-float-card-1">
+            <div class="hero-float-icon hero-float-icon-pulse">✓</div>
+            <div>
+              <p class="hero-float-title">Fast Confirmation</p>
+              <p class="hero-float-sub">We reply within hours</p>
+            </div>
+          </div>
+
+          <div class="hero-float-card hero-float-card-2">
+            <div class="flex items-center gap-1 text-gold-500">
+              <span>★★★★★</span>
+            </div>
+            <p class="hero-float-sub">"Absolutely flawless finish"</p>
+          </div>
+
+          <div class="hero-glass-badge">
+            <span class="hero-glass-badge-number">130+</span>
+            <span class="hero-glass-badge-label">Happy<br>Clients</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue">
+    <span></span>
+  </div>
+</section>
+
+<section class="trust-strip" aria-label="Trusted by">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="trust-strip-label">As trusted by beauty lovers across</p>
+    <div class="trust-strip-cities">
+      <span>Lekki</span>
+      <span class="trust-dot">•</span>
+      <span>Ikeja</span>
+      <span class="trust-dot">•</span>
+      <span>Victoria Island</span>
+      <span class="trust-dot">•</span>
+      <span>Ajah</span>
+      <span class="trust-dot">•</span>
+      <span>Surulere</span>
+      <span class="trust-dot">•</span>
+      <span>Abuja</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">What We Offer</span>
+      <h2 class="section-title">Featured Services</h2>
+      <p class="section-desc">Two crafts, done to perfection — with premium products, sterile tools and an unrushed, attentive touch.</p>
+    </div>
+
+    <div class="services-grid services-grid-compact">
+
+      <div class="service-card" data-reveal>
+        <div class="service-card-glow"></div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C9 6 7 9 7 13a5 5 0 0010 0c0-4-2-7-5-11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="service-title">Luxury Press-On &amp; Acrylic Nails</h3>
+        <p class="service-desc">Salon-perfect, reusable nail sets custom-fitted and hand-painted to your desired look.</p>
+        <a href="#nails" class="service-link">Explore Nails →</a>
+      </div>
+
+      <div class="service-card" data-reveal data-reveal-delay="100">
+        <div class="service-card-glow"></div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 4c4 0 5 3 8 3s4-3 8-3M4 12c4 0 5 3 8 3s4-3 8-3M4 20c4 0 5 3 8 3s4-3 8-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="service-title">Braiding &amp; Styling</h3>
+        <p class="service-desc">Knotless box braids, cornrows, feed-ins and more, laid neatly and built to last.</p>
+        <a href="#braiding" class="service-link">Explore Braiding →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="nails" class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Signature Collection</span>
+      <h2 class="section-title">Ammie's Touch Nails Collection</h2>
+      <p class="section-desc">Press-on, acrylic and gel sets, hand-finished and fitted to your nail bed for a flawless salon look that lasts.</p>
+    </div>
+
+    <div class="filter-bar" data-reveal>
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="press-on">Press-On</button>
+      <button class="filter-btn" data-filter="acrylic">Acrylic</button>
+      <button class="filter-btn" data-filter="gel">Gel</button>
+      <button class="filter-btn" data-filter="repair">Repairs &amp; Care</button>
+    </div>
+
+    <div class="masonry-grid" id="nails-grid">
+
+      <div class="masonry-item" data-category="press-on" data-reveal>
+        <div class="masonry-card masonry-tall">
+          <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=700&q=80" alt="Rose gold chrome press-on nail set" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Press-On</span>
+            <h3 class="masonry-title">Rose Gold Chrome Set</h3>
+            <p class="masonry-price">From ₦15,000</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Rose Gold Chrome Set" data-price="15000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="acrylic" data-reveal data-reveal-delay="80">
+        <div class="masonry-card">
+          <img src="https://images.unsplash.com/photo-1595621864169-9542383373d0?w=700&q=80" alt="Elegant nude acrylic almond nails" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Acrylic</span>
+            <h3 class="masonry-title">Nude Almond Acrylics</h3>
+            <p class="masonry-price">From ₦20,000</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Nude Almond Acrylics" data-price="20000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="gel" data-reveal data-reveal-delay="160">
+        <div class="masonry-card masonry-tall">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=80" alt="Glossy gel manicure in champagne tone" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Gel</span>
+            <h3 class="masonry-title">Champagne Gloss Gel</h3>
+            <p class="masonry-price">From ₦12,000</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Champagne Gloss Gel" data-price="12000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="press-on" data-reveal>
+        <div class="masonry-card">
+          <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=700&q=80" alt="French tip press-on nails with gold line art" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Press-On</span>
+            <h3 class="masonry-title">Gilded French Tips</h3>
+            <p class="masonry-price">From ₦16,500</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Gilded French Tips" data-price="16500">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="repair" data-reveal data-reveal-delay="80">
+        <div class="masonry-card">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=700&q=80" alt="Nail repair and care treatment" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Repairs &amp; Care</span>
+            <h3 class="masonry-title">Nail Repair &amp; Care</h3>
+            <p class="masonry-price">From ₦6,000</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Nail Repair &amp; Care" data-price="6000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="acrylic" data-reveal data-reveal-delay="160">
+        <div class="masonry-card masonry-tall">
+          <img src="https://images.unsplash.com/photo-1632344004505-119e5f5ad6a8?w=700&q=80" alt="Bold coffin shaped acrylic nails" loading="lazy">
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Acrylic</span>
+            <h3 class="masonry-title">Statement Coffin Set</h3>
+            <p class="masonry-price">From ₦22,000</p>
+            <a href="#booking" class="masonry-book book-trigger" data-service="Statement Coffin Set" data-price="22000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="braiding" class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Crowning Glory</span>
+      <h2 class="section-title">Braiding Collection</h2>
+      <p class="section-desc">Neatly laid, long-lasting braids for everyday wear or a special occasion.</p>
+    </div>
+
+    <div class="hair-grid" id="braiding-grid">
+
+      <div class="hair-card" data-reveal>
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=600&q=80" alt="Knotless box braids" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Knotless Box Braids</h3>
+          <p class="hair-card-desc">Light, tension-free braids with a smooth, natural-looking base.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦25,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Knotless Box Braids" data-price="25000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hair-card" data-reveal data-reveal-delay="80">
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Cornrows straight back" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Cornrows (Straight Back)</h3>
+          <p class="hair-card-desc">Clean, tight cornrows — a classic, low-maintenance everyday style.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦10,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Cornrows (Straight Back)" data-price="10000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hair-card" data-reveal data-reveal-delay="160">
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Feed-in braids" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Feed-In Braids</h3>
+          <p class="hair-card-desc">Gradually feathered braids for a natural, gradually thickening look.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦15,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Feed-in Braids" data-price="15000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hair-card" data-reveal>
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1522336284037-91f7da073525?w=600&q=80" alt="Kids braids" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Kids Braids</h3>
+          <p class="hair-card-desc">Gentle, comfortable styling suited to little ones.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦8,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Kids Braids" data-price="8000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hair-card" data-reveal data-reveal-delay="80">
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80" alt="Braided updo" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Braided Updo</h3>
+          <p class="hair-card-desc">Elegant braided styling swept up for events and special occasions.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦12,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Braided Updo" data-price="12000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hair-card" data-reveal data-reveal-delay="160">
+        <div class="hair-card-media">
+          <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=600&q=80" alt="Boho braids with curls" loading="lazy">
+        </div>
+        <div class="hair-card-body">
+          <h3 class="hair-card-title">Boho Braids with Curls</h3>
+          <p class="hair-card-desc">Soft curled pieces woven through for a romantic, boho finish.</p>
+          <div class="hair-card-footer">
+            <span class="hair-card-price">From ₦28,000</span>
+            <a href="#booking" class="hair-card-cta book-trigger" data-service="Boho Braids with Curls" data-price="28000">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">The Ammie Difference</span>
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-desc">A studio built on trust, premium products and results you can see and feel.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card" data-reveal>
+        <div class="why-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 6.6L21 9l-5 4.3L17.5 21 12 17.3 6.5 21 8 13.3 3 9l6.4-.4L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="why-title">Premium Products Only</h3>
+        <p class="why-desc">We use only trusted, high-grade products sourced for longevity and safety.</p>
+      </div>
+
+      <div class="why-card" data-reveal data-reveal-delay="80">
+        <div class="why-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="why-title">Punctual &amp; Reliable</h3>
+        <p class="why-desc">Appointments start on time, every time, so your schedule stays intact.</p>
+      </div>
+
+      <div class="why-card" data-reveal data-reveal-delay="160">
+        <div class="why-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6.5 5.5 5.5 0 0121.5 12c-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="why-title">Hygiene First</h3>
+        <p class="why-desc">Every tool is sterilised and every station is sanitised before your appointment.</p>
+      </div>
+
+      <div class="why-card" data-reveal data-reveal-delay="240">
+        <div class="why-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="why-title">Results You Can Trust</h3>
+        <p class="why-desc">Hundreds of happy clients and a portfolio that speaks for itself.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="stats-grid">
+
+      <div class="stat-block" data-reveal>
+        <span class="stat-number" data-counter data-target="130">0</span>
+        <span class="stat-plus">+</span>
+        <p class="stat-label">Happy Clients</p>
+      </div>
+
+      <div class="stat-block" data-reveal data-reveal-delay="80">
+        <span class="stat-number" data-counter data-target="12">0</span>
+        <p class="stat-label">Styles Offered</p>
+      </div>
+
+      <div class="stat-block" data-reveal data-reveal-delay="160">
+        <span class="stat-number" data-counter data-target="4">0</span>
+        <span class="stat-plus" style="font-size:1.6rem;">.9</span>
+        <p class="stat-label">Average Rating</p>
+      </div>
+
+      <div class="stat-block" data-reveal data-reveal-delay="240">
+        <span class="stat-number" data-counter data-target="3">0</span>
+        <p class="stat-label">Years of Experience</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Real Results</span>
+      <h2 class="section-title">Customer Results Gallery</h2>
+      <p class="section-desc">A look at real appointments, real clients, and the finish they walked away with.</p>
+    </div>
+
+    <div class="pin-grid" id="results-gallery">
+      <div class="pin-item" data-reveal>
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Client nail result" loading="lazy" data-lightbox>
+      </div>
+      <div class="pin-item pin-tall" data-reveal data-reveal-delay="60">
+        <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=500&q=80" alt="Client braiding result" loading="lazy" data-lightbox>
+      </div>
+      <div class="pin-item" data-reveal data-reveal-delay="120">
+        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&q=80" alt="Client nail set result" loading="lazy" data-lightbox>
+      </div>
+      <div class="pin-item pin-tall" data-reveal data-reveal-delay="180">
+        <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=500&q=80" alt="Client braiding style result" loading="lazy" data-lightbox>
+      </div>
+      <div class="pin-item" data-reveal>
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="Client braid result" loading="lazy" data-lightbox>
+      </div>
+      <div class="pin-item" data-reveal data-reveal-delay="60">
+        <img src="https://images.unsplash.com/photo-1632344004505-119e5f5ad6a8?w=500&q=80" alt="Client nail result" loading="lazy" data-lightbox>
+      </div>
+    </div>
+    <p class="gallery-note" id="gallery-note">More photos added regularly by Ammie ✦</p>
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">See The Transformation</span>
+      <h2 class="section-title">Before &amp; After Gallery</h2>
+      <p class="section-desc">Drag the slider to see the difference our service makes.</p>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-card" data-reveal>
+        <div class="ba-slider" data-ba-slider>
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=700&q=80" alt="Before nail repair" class="ba-before">
+          <div class="ba-after-wrap">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=700&q=80" alt="After nail repair" class="ba-after">
+          </div>
+          <div class="ba-handle" data-ba-handle>
+            <span>↔</span>
+          </div>
+        </div>
+        <p class="ba-caption">Nail Repair &amp; Restoration</p>
+      </div>
+
+      <div class="ba-card" data-reveal data-reveal-delay="100">
+        <div class="ba-slider" data-ba-slider>
+          <img src="https://images.unsplash.com/photo-1522337194483-cf4d0b4b3b8f?w=700&q=80" alt="Before braiding" class="ba-before">
+          <div class="ba-after-wrap">
+            <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=700&q=80" alt="After braiding" class="ba-after">
+          </div>
+          <div class="ba-handle" data-ba-handle>
+            <span>↔</span>
+          </div>
+        </div>
+        <p class="ba-caption">Fresh Knotless Braids</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Simple &amp; Transparent</span>
+      <h2 class="section-title">Pricing Packages</h2>
+      <p class="section-desc">Choose the package that suits your occasion, or book services individually.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card" data-reveal>
+        <h3 class="pricing-name">Essentials</h3>
+        <p class="pricing-sub">For a quick, everyday refresh</p>
+        <div class="pricing-amount"><span>₦</span>15,000</div>
+        <ul class="pricing-features">
+          <li>Gel or press-on nail set</li>
+          <li>Basic cornrow style</li>
+          <li>30-day aftercare tips</li>
+          <li>Free nail repair touch-up</li>
+        </ul>
+        <a href="#booking" class="pricing-cta book-trigger" data-service="Essentials Package" data-price="15000">Book Essentials</a>
+      </div>
+
+      <div class="pricing-card pricing-popular" data-reveal data-reveal-delay="100">
+        <span class="pricing-badge">Most Popular</span>
+        <h3 class="pricing-name">Signature</h3>
+        <p class="pricing-sub">Our most-loved full glam combo</p>
+        <div class="pricing-amount"><span>₦</span>45,000</div>
+        <ul class="pricing-features">
+          <li>Luxury acrylic or gel set</li>
+          <li>Knotless box braids</li>
+          <li>Complimentary nail repair</li>
+          <li>Priority booking slot</li>
+        </ul>
+        <a href="#booking" class="pricing-cta pricing-cta-primary book-trigger" data-service="Signature Package" data-price="45000">Book Signature</a>
+      </div>
+
+      <div class="pricing-card" data-reveal data-reveal-delay="200">
+        <h3 class="pricing-name">Braid &amp; Glam</h3>
+        <p class="pricing-sub">Full glam for your big day</p>
+        <div class="pricing-amount"><span>₦</span>60,000</div>
+        <ul class="pricing-features">
+          <li>Boho braids with curls</li>
+          <li>Statement coffin nail set</li>
+          <li>Trial consultation included</li>
+          <li>On-location option available</li>
+        </ul>
+        <a href="#booking" class="pricing-cta book-trigger" data-service="Braid &amp; Glam Package" data-price="60000">Book Braid &amp; Glam</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">For Our Regulars</span>
+      <h2 class="section-title">Membership &amp; VIP Packages</h2>
+      <p class="section-desc">Join the VIP list for priority booking, member-only pricing and exclusive perks.</p>
+    </div>
+
+    <div class="vip-grid">
+
+      <div class="vip-card" data-reveal>
+        <h3 class="vip-name">Gold Member</h3>
+        <div class="vip-price"><span>₦</span>20,000<span class="vip-period">/month</span></div>
+        <ul class="vip-features">
+          <li>10% off every appointment</li>
+          <li>1 free nail repair monthly</li>
+          <li>Priority WhatsApp support</li>
+        </ul>
+        <a href="#booking" class="vip-cta book-trigger" data-service="Gold Membership" data-price="20000">Join Gold</a>
+      </div>
+
+      <div class="vip-card vip-card-featured" data-reveal data-reveal-delay="100">
+        <span class="vip-badge">Best Value</span>
+        <h3 class="vip-name">Platinum Member</h3>
+        <div class="vip-price"><span>₦</span>35,000<span class="vip-period">/month</span></div>
+        <ul class="vip-features">
+          <li>18% off every appointment</li>
+          <li>Free braid touch-up monthly</li>
+          <li>Priority booking slots</li>
+          <li>Birthday month gift package</li>
+        </ul>
+        <a href="#booking" class="vip-cta vip-cta-primary book-trigger" data-service="Platinum Membership" data-price="35000">Join Platinum</a>
+      </div>
+
+      <div class="vip-card" data-reveal data-reveal-delay="200">
+        <h3 class="vip-name">Diamond Member</h3>
+        <div class="vip-price"><span>₦</span>55,000<span class="vip-period">/month</span></div>
+        <ul class="vip-features">
+          <li>25% off every appointment</li>
+          <li>Free service of choice monthly</li>
+          <li>Dedicated stylist</li>
+          <li>Exclusive event invitations</li>
+        </ul>
+        <a href="#booking" class="vip-cta book-trigger" data-service="Diamond Membership" data-price="55000">Join Diamond</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">How It Works</span>
+      <h2 class="section-title">Our Process</h2>
+      <p class="section-desc">A simple, transparent path from booking to your finished look.</p>
+    </div>
+
+    <div class="process-timeline">
+
+      <div class="process-step" data-reveal>
+        <div class="process-number">1</div>
+        <h3 class="process-title">Book</h3>
+        <p class="process-desc">Choose your service and preferred date through our booking form or WhatsApp.</p>
+      </div>
+
+      <div class="process-step" data-reveal data-reveal-delay="80">
+        <div class="process-number">2</div>
+        <h3 class="process-title">Confirm</h3>
+        <p class="process-desc">We confirm your slot and share full appointment details with you.</p>
+      </div>
+
+      <div class="process-step" data-reveal data-reveal-delay="160">
+        <div class="process-number">3</div>
+        <h3 class="process-title">Payment</h3>
+        <p class="process-desc">Transfer to our account using the payment instructions provided.</p>
+      </div>
+
+      <div class="process-step" data-reveal data-reveal-delay="240">
+        <div class="process-number">4</div>
+        <h3 class="process-title">Upload Proof</h3>
+        <p class="process-desc">Upload your payment proof so we can verify and lock your slot.</p>
+      </div>
+
+      <div class="process-step" data-reveal data-reveal-delay="320">
+        <div class="process-number">5</div>
+        <h3 class="process-title">Confirmed</h3>
+        <p class="process-desc">Your appointment is confirmed via WhatsApp. We'll see you soon!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Loved By Clients</span>
+      <h2 class="section-title">Testimonials</h2>
+    </div>
+
+    <div class="testimonial-slider" data-reveal>
+      <div class="testimonial-track" id="testimonial-track">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"My press-on nails looked so natural, people thought they were my real nails. Booking was smooth and the finish was flawless."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Client photo">
+            <div>
+              <p class="testimonial-name">Chidinma O.</p>
+              <p class="testimonial-role">Lekki</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"My knotless braids stayed neat for almost 6 weeks. No pulling, no pain — just clean, beautiful edges."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Client photo">
+            <div>
+              <p class="testimonial-name">Fatima B.</p>
+              <p class="testimonial-role">Ikeja</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Booked the Braid & Glam package for my traditional wedding. The braids held up all day through the reception. So grateful!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&q=80" alt="Client photo">
+            <div>
+              <p class="testimonial-name">Kemi A.</p>
+              <p class="testimonial-role">Victoria Island</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The coffin nail set was exactly what I pictured, maybe even better. Ammie really listens before she starts."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80" alt="Client photo">
+            <div>
+              <p class="testimonial-name">Rita N.</p>
+              <p class="testimonial-role">Ajah</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Took my daughter for kids braids and the whole experience was gentle and patient. She didn't cry once!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=100&q=80" alt="Client photo">
+            <div>
+              <p class="testimonial-name">Ngozi P.</p>
+              <p class="testimonial-role">Surulere</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="social-header" data-reveal>
+      <span class="section-eyebrow">Follow Along</span>
+      <h2 class="section-title">Instagram Feed</h2>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-handle">@ammiestouch</a>
+    </div>
+
+    <div class="social-grid" data-reveal data-reveal-delay="80">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1595621864169-9542383373d0?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1632344004505-119e5f5ad6a8?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-tile"><img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&q=80" alt="Instagram post preview" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="social-header" data-reveal>
+      <span class="section-eyebrow">Watch Us Work</span>
+      <h2 class="section-title">TikTok Preview</h2>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-handle">@ammiestouch</a>
+    </div>
+
+    <div class="tiktok-grid" data-reveal data-reveal-delay="80">
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="tiktok-tile">
+        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=400&q=80" alt="TikTok video preview">
+        <span class="tiktok-play">▶</span>
+      </a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="tiktok-tile">
+        <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=400&q=80" alt="TikTok video preview">
+        <span class="tiktok-play">▶</span>
+      </a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="tiktok-tile">
+        <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=400&q=80" alt="TikTok video preview">
+        <span class="tiktok-play">▶</span>
+      </a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener" class="tiktok-tile">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=80" alt="TikTok video preview">
+        <span class="tiktok-play">▶</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section-block">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list" data-reveal>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How do I book an appointment?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Fill out the booking form below or message us on WhatsApp with your preferred service, date and time. We'll confirm availability shortly after.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How does the payment process work?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>After booking, we'll send you our bank transfer details. Once you've paid, upload your payment proof on this site and we'll confirm your appointment via WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How long do press-on nails last?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>With proper care, our press-on sets typically last 2-3 weeks and can be reapplied. We'll walk you through aftercare after your appointment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How long do braids usually last?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Most braided styles hold neatly for 4-6 weeks with good nighttime care. We'll share aftercare tips at your appointment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What is your cancellation policy?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We ask for at least 24 hours' notice to reschedule or cancel so we can offer the slot to another client.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="section-block section-alt">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Reserve Your Slot</span>
+      <h2 class="section-title">Book an Appointment</h2>
+      <p class="section-desc">Fill in your details and we'll confirm your appointment within a few hours.</p>
+    </div>
+
+    <div class="booking-scarcity-line" data-reveal>
+      <span class="booking-scarcity-icon">✦</span>
+      We accept a limited number of appointments daily to give every client our full, unhurried attention.
+    </div>
+
+    <form id="booking-form" class="lux-form" data-reveal novalidate>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+          <span class="form-error">Please enter your full name</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span class="form-error">Please enter a valid phone number</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required>
+          <span class="form-error">Please enter your WhatsApp number</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+          <span class="form-error">Please enter a valid email</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <optgroup label="Nails">
+              <option value="Rose Gold Chrome Set" data-price="15000">Rose Gold Chrome Set — ₦15,000</option>
+              <option value="Nude Almond Acrylics" data-price="20000">Nude Almond Acrylics — ₦20,000</option>
+              <option value="Champagne Gloss Gel" data-price="12000">Champagne Gloss Gel — ₦12,000</option>
+              <option value="Gilded French Tips" data-price="16500">Gilded French Tips — ₦16,500</option>
+              <option value="Nail Repair &amp; Care" data-price="6000">Nail Repair &amp; Care — ₦6,000</option>
+              <option value="Statement Coffin Set" data-price="22000">Statement Coffin Set — ₦22,000</option>
+            </optgroup>
+            <optgroup label="Braiding">
+              <option value="Knotless Box Braids" data-price="25000">Knotless Box Braids — ₦25,000</option>
+              <option value="Cornrows (Straight Back)" data-price="10000">Cornrows (Straight Back) — ₦10,000</option>
+              <option value="Feed-in Braids" data-price="15000">Feed-In Braids — ₦15,000</option>
+              <option value="Kids Braids" data-price="8000">Kids Braids — ₦8,000</option>
+              <option value="Braided Updo" data-price="12000">Braided Updo — ₦12,000</option>
+              <option value="Boho Braids with Curls" data-price="28000">Boho Braids with Curls — ₦28,000</option>
+            </optgroup>
+            <optgroup label="Packages">
+              <option value="Essentials Package" data-price="15000">Essentials Package — ₦15,000</option>
+              <option value="Signature Package" data-price="45000">Signature Package — ₦45,000</option>
+              <option value="Braid &amp; Glam Package" data-price="60000">Braid &amp; Glam Package — ₦60,000</option>
+            </optgroup>
+            <optgroup label="Membership">
+              <option value="Gold Membership" data-price="20000">Gold Membership — ₦20,000/mo</option>
+              <option value="Platinum Membership" data-price="35000">Platinum Membership — ₦35,000/mo</option>
+              <option value="Diamond Membership" data-price="55000">Diamond Membership — ₦55,000/mo</option>
+            </optgroup>
+          </select>
+          <span class="form-error">Please select a service</span>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+          <span class="form-error">Please choose a date</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="time" required>
+          <span class="form-error">Please choose a time</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Message</label>
+          <input type="text" id="message" name="message" placeholder="Optional">
+        </div>
+      </div>
+
+      <div class="selected-service-chip" id="selected-service-chip" style="display:none;">
+        <span id="selected-service-text"></span>
+      </div>
+
+      <button type="submit" class="btn-primary btn-magnetic btn-shimmer form-submit" data-magnetic>
+        Submit Booking
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+    <div id="booking-success" class="success-card">
+      <div class="success-icon">✓</div>
+      <h3>Booking Received!</h3>
+      <p>Thank you for booking with Ammie's Touch. Your reference is <strong id="booking-ref-display">—</strong>. Please check the payment instructions below to secure your slot.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Step 3</span>
+      <h2 class="section-title">Payment Instructions</h2>
+      <p class="section-desc">Complete your transfer using the details below to secure your appointment.</p>
+    </div>
+
+    <div class="payment-summary" id="payment-summary" data-reveal>
+      <p>Service Selected: <strong id="payment-service-name">Select a service above</strong></p>
+      <p>Amount Due: <strong id="payment-service-price">—</strong></p>
+    </div>
+
+    <div class="payment-card" data-reveal>
+      <div class="payment-row">
+        <span class="payment-label">Bank Name</span>
+        <span class="payment-value">OKAY</span>
+      </div>
+      <div class="payment-row">
+        <span class="payment-label">Account Name</span>
+        <span class="payment-value">Ammie's Touch Beauty</span>
+      </div>
+      <div class="payment-row">
+        <span class="payment-label">Account Number</span>
+        <span class="payment-value">8132433643</span>
+      </div>
+      <div class="payment-row">
+        <span class="payment-label">Amount to Transfer</span>
+        <span class="payment-value" id="payment-row-amount">As agreed for your service</span>
+      </div>
+      <div class="payment-row">
+        <span class="payment-label">Reference</span>
+        <span class="payment-value">Your full name</span>
+      </div>
+
+      <div class="payment-notice">
+        <strong>Important:</strong> Your appointment is only confirmed once we've verified your payment proof below. Please keep your transfer receipt.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-block section-alt">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Step 4</span>
+      <h2 class="section-title">Upload Payment Proof</h2>
+      <p class="section-desc">Share your transfer details so we can verify and confirm your appointment.</p>
+    </div>
+
+    <form id="proof-form" class="lux-form" data-reveal novalidate>
+
+      <input type="hidden" id="proofBookingId" name="proofBookingId" value="">
+
+      <div class="form-group">
+        <label for="proofFile">Upload Screenshot</label>
+        <input type="file" id="proofFile" name="proofFile" accept="image/*" required>
+        <span class="form-error">Please upload your payment screenshot</span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="txRef">Transaction Reference</label>
+          <input type="text" id="txRef" name="txRef" required>
+          <span class="form-error">Please enter your transaction reference</span>
+        </div>
+        <div class="form-group">
+          <label for="amountPaid">Amount Paid</label>
+          <input type="text" id="amountPaid" name="amountPaid" required>
+          <span class="form-error">Please enter the amount paid</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="proofNote">Additional Note</label>
+        <input type="text" id="proofNote" name="proofNote" placeholder="Optional">
+      </div>
+
+      <button type="submit" class="btn-primary btn-magnetic btn-shimmer form-submit" data-magnetic>
+        Submit Proof
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+    <div id="proof-success" class="success-card">
+      <div class="success-icon">✓</div>
+      <h3>Thank You!</h3>
+      <p>Your payment proof has been received successfully. Your appointment will be confirmed shortly via WhatsApp.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section-block">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="section-header" data-reveal>
+      <span class="section-eyebrow">Get In Touch</span>
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info" data-reveal>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">⏰</span>
+          <div>
+            <p class="contact-info-title">Business Hours</p>
+            <p class="contact-info-sub">Mon - Sat: 9am - 7pm<br>Sunday: By appointment only</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📞</span>
+          <div>
+            <p class="contact-info-title">Phone</p>
+            <p class="contact-info-sub">+234 808 115 6211</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">✉️</span>
+          <div>
+            <p class="contact-info-title">Email</p>
+            <p class="contact-info-sub">hello@ammiestouch.com</p>
+          </div>
+        </div>
+        <div class="contact-social-row">
+          <a href="https://wa.me/2348081156211" target="_blank" rel="noopener" class="contact-social-icon">WA</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-social-icon">IG</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="contact-social-icon">TT</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="contact-social-icon">FB</a>
+          <a href="https://snapchat.com" target="_blank" rel="noopener" class="contact-social-icon">SC</a>
+        </div>
+      </div>
+
+      <div class="contact-map" data-reveal data-reveal-delay="100">
+        <iframe title="Studio location map" src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center" data-reveal>
+    <h2 class="newsletter-title">Stay In The Glow</h2>
+    <p class="newsletter-desc">Subscribe for exclusive offers, beauty tips, and first access to new packages.</p>
+    <form id="newsletter-form" class="newsletter-form" novalidate>
+      <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+    <p id="newsletter-success" class="newsletter-success">You're subscribed! Watch your inbox for updates.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo footer-logo">
+          <svg class="brand-glyph" width="26" height="26" viewBox="0 0 40 40" fill="none">
+            <path d="M8 32C8 32 8 20 20 20C32 20 32 8 32 8" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M8 8C8 8 8 20 20 20C32 20 32 32 32 32" stroke="#E4CE9C" stroke-width="2.4" stroke-linecap="round" opacity="0.6"/>
+            <circle cx="20" cy="20" r="2.6" fill="#E4CE9C"/>
+          </svg>
+          <span class="nav-logo-text">Ammie's <em>Touch</em></span>
+        </a>
+        <p class="footer-desc">Nails and braids, done beautifully. Lagos' trusted studio for press-on nails and neat, long-lasting braids.</p>
+        <div class="contact-social-row">
+          <a href="https://wa.me/2348081156211" target="_blank" rel="noopener" class="contact-social-icon">WA</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-social-icon">IG</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="contact-social-icon">TT</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="contact-social-icon">FB</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#nails">Nails</a></li>
+          <li><a href="#braiding">Braiding</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#nails">Press-On &amp; Acrylic Nails</a></li>
+          <li><a href="#braiding">Braiding &amp; Styling</a></li>
+          <li><a href="#pricing">Packages &amp; Membership</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Business Hours</h4>
+        <p class="footer-hours">Mon - Sat: 9am - 7pm<br>Sunday: By appointment only</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ammie's Touch. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348081156211" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.44-1.35a9.9 9.9 0 004.6 1.14h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.15c-.24.68-1.4 1.32-1.94 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.91-1.26-4.81-4.19-4.96-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.36.76-.36h.55c.18 0 .42-.02.65.5.24.55.82 1.9.9 2.04.07.14.12.3.02.49-.1.19-.15.3-.3.46-.14.16-.3.36-.43.48-.14.13-.29.28-.13.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.45.12.61-.08.16-.2.7-.83.9-1.11.19-.28.38-.23.63-.14.26.1 1.62.77 1.9.91.27.14.46.2.53.32.07.11.07.66-.17 1.33z"/></svg>
+</a>
+
+<a href="https://instagram.com" target="_blank" rel="noopener" class="floating-btn floating-instagram" aria-label="Visit our Instagram">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+</a>
+
+<button id="back-to-top" class="floating-btn back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image">×</button>
+  <img src="" alt="" id="lightbox-img">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

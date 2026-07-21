@@ -1,0 +1,98 @@
+.hero-sparkle {
+  position: absolute;
+  color: #C9A227;
+  font-size: 1.1rem;
+  z-index: 1;
+  opacity: 0;
+  animation: sparkleFloat 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-sparkle-1 { top: 18%; left: 8%; animation-delay: 0s; font-size: 1.4rem; }
+.hero-sparkle-2 { top: 65%; left: 4%; animation-delay: 1.2s; font-size: 0.9rem; }
+.hero-sparkle-3 { top: 30%; right: 6%; animation-delay: 2.4s; font-size: 1.2rem; }
+.hero-sparkle-4 { top: 75%; right: 10%; animation-delay: 3.4s; font-size: 0.8rem; }
+
+@keyframes sparkleFloat {
+  0% { opacity: 0; transform: translateY(10px) scale(0.6) rotate(0deg); }
+  30% { opacity: 1; transform: translateY(-6px) scale(1) rotate(45deg); }
+  60% { opacity: 0.7; transform: translateY(-16px) scale(0.9) rotate(90deg); }
+  100% { opacity: 0; transform: translateY(-28px) scale(0.5) rotate(140deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-sparkle { display: none; }
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  animation: shimmerSweep 3.2s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+  0% { left: -60%; }
+  50% { left: 130%; }
+  100% { left: 130%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shimmer::after { display: none; }
+}
+
+.section-eyebrow {
+  position: relative;
+}
+
+.masonry-card:hover .masonry-title,
+.hair-card:hover .hair-card-title {
+  animation: gentleGlowText 1.2s ease-in-out;
+}
+
+@keyframes gentleGlowText {
+  0%, 100% { text-shadow: none; }
+  50% { text-shadow: 0 0 12px rgba(228, 206, 160, 0.6); }
+}
+
+.pricing-popular {
+  animation: popularPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes popularPulse {
+  0%, 100% { box-shadow: 0 20px 44px rgba(185, 99, 108, 0.16); }
+  50% { box-shadow: 0 24px 54px rgba(201, 162, 39, 0.28); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-popular { animation: none; }
+}
+
+.why-icon,
+.service-icon {
+  transition: transform 0.5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.why-card:hover .why-icon,
+.service-card:hover .service-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.testimonial-stars {
+  display: inline-block;
+  animation: starTwinkle 2.4s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-stars { animation: none; }
+}
