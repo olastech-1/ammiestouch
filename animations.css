@@ -1,3 +1,76 @@
+/* ---- Hero load-in sequence: each element gets its own animation, not just fade ---- */
+.hero-badge { opacity: 0; }
+.hero-badge.is-visible { animation: badgeDrop 0.7s var(--ease-lux) forwards; }
+@keyframes badgeDrop {
+  0% { opacity: 0; transform: translateY(-18px) scale(0.9); }
+  60% { opacity: 1; transform: translateY(4px) scale(1.03); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-desc { opacity: 0; }
+.hero-desc.is-visible { animation: heroRiseIn 0.8s var(--ease-lux) forwards; }
+@keyframes heroRiseIn {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-cta-row { opacity: 0; }
+.hero-cta-row.is-visible { animation: heroPopIn 0.6s cubic-bezier(.34, 1.56, .64, 1) forwards; }
+@keyframes heroPopIn {
+  0% { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.hero-stats { opacity: 0; }
+.hero-stats.is-visible { animation: heroRiseIn 0.8s var(--ease-lux) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge, .hero-desc, .hero-cta-row, .hero-stats { opacity: 1; animation: none; }
+}
+
+/* ---- Section-eyebrow: a small underline that draws in once its section is revealed ---- */
+.section-eyebrow::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, var(--gold-500), var(--rose-500));
+  transition: width 0.7s var(--ease-lux) 0.15s;
+}
+[data-reveal].is-visible .section-eyebrow::after { width: 46px; }
+
+/* ---- Button ripple: click feedback distinct from hover/scroll animations ---- */
+.btn-ripple { position: relative; overflow: hidden; }
+.ripple-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transform: scale(0);
+  animation: rippleOut 0.6s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes rippleOut {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ripple-dot { display: none; }
+}
+
+/* ---- Floating WhatsApp button: gentle attention-pulse ring ---- */
+.floating-whatsapp { animation: floatingPulse 2.6s ease-in-out infinite; }
+@keyframes floatingPulse {
+  0%, 100% { box-shadow: 0 14px 30px rgba(43, 36, 32, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 14px 30px rgba(43, 36, 32, 0.2), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp { animation: none; }
+}
+
+/* ---- Hero visual: subtle continuous tilt on mouse move (desktop), driven by JS custom properties ---- */
+.hero-visual-frame { transition: transform 0.3s ease-out; transform: perspective(1000px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)); }
+
 .hero-sparkle {
   position: absolute;
   color: #C9A227;

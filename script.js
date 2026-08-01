@@ -1,11 +1,18 @@
 window.addEventListener('load', () => {
   const loader = document.getElementById('loading-screen');
   const heroTitle = document.getElementById('hero-title');
+  const heroBadge = document.querySelector('.hero-badge');
+  const heroDesc = document.querySelector('.hero-desc');
+  const heroCtaRow = document.querySelector('.hero-cta-row');
+  const heroStats = document.querySelector('.hero-stats');
+
   setTimeout(() => {
     loader.classList.add('is-hidden');
-    if (heroTitle) {
-      setTimeout(() => heroTitle.classList.add('is-visible'), 200);
-    }
+    if (heroBadge) setTimeout(() => heroBadge.classList.add('is-visible'), 100);
+    if (heroTitle) setTimeout(() => heroTitle.classList.add('is-visible'), 260);
+    if (heroDesc) setTimeout(() => heroDesc.classList.add('is-visible'), 520);
+    if (heroCtaRow) setTimeout(() => heroCtaRow.classList.add('is-visible'), 700);
+    if (heroStats) setTimeout(() => heroStats.classList.add('is-visible'), 860);
   }, 600);
 });
 
@@ -134,6 +141,36 @@ magneticButtons.forEach((btn) => {
     btn.style.transform = 'translate(0, 0)';
   });
 });
+
+document.querySelectorAll('.btn-ripple').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height) * 1.6;
+    const dot = document.createElement('span');
+    dot.className = 'ripple-dot';
+    dot.style.width = dot.style.height = size + 'px';
+    dot.style.left = (e.clientX - rect.left - size / 2) + 'px';
+    dot.style.top = (e.clientY - rect.top - size / 2) + 'px';
+    btn.appendChild(dot);
+    dot.addEventListener('animationend', () => dot.remove());
+  });
+});
+
+const heroVisualFrame = document.querySelector('.hero-visual-frame');
+if (heroVisualFrame && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const heroVisual = document.querySelector('.hero-visual');
+  heroVisual.addEventListener('mousemove', (e) => {
+    const rect = heroVisual.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    heroVisualFrame.style.setProperty('--tiltY', (px * 8) + 'deg');
+    heroVisualFrame.style.setProperty('--tiltX', (py * -8) + 'deg');
+  });
+  heroVisual.addEventListener('mouseleave', () => {
+    heroVisualFrame.style.setProperty('--tiltX', '0deg');
+    heroVisualFrame.style.setProperty('--tiltY', '0deg');
+  });
+}
 
 document.querySelectorAll('[data-ba-slider]').forEach((slider) => {
   const afterWrap = slider.querySelector('.ba-after-wrap');
