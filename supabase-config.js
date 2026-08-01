@@ -1,5 +1,5 @@
-const SUPABASE_URL = 'https://gaxjtqdsfxdsqbtmzbee.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_IfmaouzX1R7qBvonLRa4sA_d2VTMorC';
+const SUPABASE_URL = 'https://qghlzauegjdkjrotaobz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_P6FuOmzf2WDSt-cszSMVIQ_uKeQHa-D';
 
 let supabaseClient = null;
 

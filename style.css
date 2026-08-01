@@ -15,7 +15,8 @@
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
-body { overflow-x: hidden; }
+html { overflow-x: hidden; width: 100%; }
+body { overflow-x: hidden; width: 100%; }
 ::selection { background: var(--rose-500); color: #fff; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
   outline: 2px solid var(--gold-500); outline-offset: 3px; border-radius: 4px;
@@ -306,6 +307,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 900px) { .lashes-layout { grid-template-columns: 1fr; } .masonry-grid { columns: 2 220px; } .process-timeline { grid-template-columns: repeat(2, 1fr); row-gap: 40px; } .process-timeline::before { display: none; } .contact-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } .pin-grid { columns: 2 160px; } .process-timeline { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .floating-whatsapp, .floating-instagram, .back-to-top { width: 48px; height: 48px; right: 16px; } .floating-whatsapp { bottom: 16px; } .floating-instagram { bottom: 74px; } .back-to-top { bottom: 132px; } .testimonial-card { padding: 30px 24px; } .testimonial-text { font-size: 1.05rem; } .services-grid-compact { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .masonry-grid { columns: 1; } }
+
+@media (max-width: 640px) {
+  .section-block { padding: 64px 0; }
+  .hero .pt-36 { padding-top: 6.5rem; }
+  .hero .pb-24 { padding-bottom: 3.5rem; }
+  .services-grid-compact { grid-template-columns: 1fr; }
+  .lux-form, .payment-card { padding: 26px 20px; }
+  .pricing-card, .vip-card { padding: 30px 22px; }
+  .section-header { margin-bottom: 40px; }
+  .hero-visual-img { height: 320px; }
+  .hero-float-card { padding: 9px 12px; gap: 8px; }
+  .hero-float-icon { width: 26px; height: 26px; font-size: 0.75rem; }
+  .hero-float-title { font-size: 0.74rem; }
+  .hero-float-sub { font-size: 0.68rem; }
+  .hero-float-card-1 { top: 8%; left: 4px; }
+  .hero-float-card-2 { bottom: 8%; left: 4px; }
+  .hero-glass-badge { width: 74px; height: 74px; top: -12px; right: 4px; }
+  .hero-glass-badge-number { font-size: 0.95rem; }
+  .hero-glass-badge-label { font-size: 0.55rem; }
+  .hero-stats { gap: 16px; }
+  .hero-stat-number, .hero-stat-plus { font-size: 1.5rem; }
+  .pin-grid { columns: 1; }
+  .newsletter-form input { min-width: 0; width: 100%; }
+}
 .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .font-body { font-family: 'Manrope', sans-serif; }
 .font-display { font-family: 'Fraunces', serif; }

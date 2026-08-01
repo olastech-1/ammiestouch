@@ -461,6 +461,27 @@ function renderBraidCard(item) {
     '</div></div></div>';
 }
 
+/* Rebuilds an <optgroup> in the booking form's Service dropdown from live data.
+   Keeps the currently selected value selected if it still exists after the rebuild. */
+function rebuildOptgroup(optgroupId, items) {
+  const optgroup = document.getElementById(optgroupId);
+  if (!optgroup || !items || items.length === 0) return;
+  const previousValue = serviceSelect ? serviceSelect.value : '';
+  optgroup.innerHTML = items.map((item) =>
+    '<option value="' + escapeAttr(item.name) + '" data-price="' + Number(item.price) + '">' +
+    escapeAttr(item.name) + ' — ' + formatNaira(item.price) + (item.period ? item.period : '') +
+    '</option>'
+  ).join('');
+  if (previousValue && serviceSelect) {
+    const stillExists = Array.from(serviceSelect.options).some((opt) => opt.value === previousValue);
+    if (stillExists) serviceSelect.value = previousValue;
+  }
+}
+
+function escapeAttr(str) {
+  return String(str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 async function loadServicesFromSupabase() {
   if (typeof supabaseClient === 'undefined' || !supabaseClient) return;
 
@@ -477,12 +498,14 @@ async function loadServicesFromSupabase() {
 
     if (nails.length > 0) {
       nailsGrid.innerHTML = nails.map(renderNailCard).join('');
+      rebuildOptgroup('optgroup-nails', nails);
     } else {
       nailsGrid.innerHTML = emptyStateHtml('nail');
     }
 
     if (braiding.length > 0) {
       braidingGrid.innerHTML = braiding.map(renderBraidCard).join('');
+      rebuildOptgroup('optgroup-braiding', braiding);
     } else {
       braidingGrid.innerHTML = emptyStateHtml('braiding');
     }
@@ -491,6 +514,65 @@ async function loadServicesFromSupabase() {
   }
 }
 loadServicesFromSupabase();
+
+/* ---------- Pricing Packages & Membership: load from Supabase "packages" table ---------- */
+
+function renderPricingCard(pkg) {
+  const features = Array.isArray(pkg.features) ? pkg.features : [];
+  const popularClass = pkg.is_featured ? ' pricing-popular' : '';
+  const badge = pkg.is_featured ? '<span class="pricing-badge">' + (pkg.badge_text || 'Most Popular') + '</span>' : '';
+  const ctaClass = pkg.is_featured ? 'pricing-cta pricing-cta-primary book-trigger' : 'pricing-cta book-trigger';
+  return '<div class="pricing-card' + popularClass + '">' +
+    badge +
+    '<h3 class="pricing-name">' + escapeAttr(pkg.name) + '</h3>' +
+    '<p class="pricing-sub">' + escapeAttr(pkg.subtitle || '') + '</p>' +
+    '<div class="pricing-amount"><span>₦</span>' + Number(pkg.price).toLocaleString('en-NG') + '</div>' +
+    '<ul class="pricing-features">' + features.map((f) => '<li>' + escapeAttr(f) + '</li>').join('') + '</ul>' +
+    '<a href="#booking" class="' + ctaClass + '" data-service="' + escapeAttr(pkg.name) + '" data-price="' + Number(pkg.price) + '">Book ' + escapeAttr(pkg.name) + '</a>' +
+    '</div>';
+}
+
+function renderVipCard(pkg) {
+  const features = Array.isArray(pkg.features) ? pkg.features : [];
+  const featuredClass = pkg.is_featured ? ' vip-card-featured' : '';
+  const badge = pkg.is_featured ? '<span class="vip-badge">' + (pkg.badge_text || 'Best Value') + '</span>' : '';
+  const ctaClass = pkg.is_featured ? 'vip-cta vip-cta-primary book-trigger' : 'vip-cta book-trigger';
+  return '<div class="vip-card' + featuredClass + '">' +
+    badge +
+    '<h3 class="vip-name">' + escapeAttr(pkg.name) + '</h3>' +
+    '<div class="vip-price"><span>₦</span>' + Number(pkg.price).toLocaleString('en-NG') + '<span class="vip-period">' + escapeAttr(pkg.period || '/month') + '</span></div>' +
+    '<ul class="vip-features">' + features.map((f) => '<li>' + escapeAttr(f) + '</li>').join('') + '</ul>' +
+    '<a href="#booking" class="' + ctaClass + '" data-service="' + escapeAttr(pkg.name) + '" data-price="' + Number(pkg.price) + '">Join ' + escapeAttr(pkg.name) + '</a>' +
+    '</div>';
+}
+
+async function loadPackagesFromSupabase() {
+  if (typeof supabaseClient === 'undefined' || !supabaseClient) return;
+
+  const pricingGrid = document.getElementById('pricing-grid');
+  const vipGrid = document.getElementById('vip-grid');
+
+  try {
+    const result = await supabaseClient.from('packages').select('*').order('price', { ascending: true });
+    if (result.error) throw result.error;
+    const data = result.data || [];
+
+    const packages = data.filter((item) => item.type === 'package');
+    const memberships = data.filter((item) => item.type === 'membership');
+
+    if (packages.length > 0) {
+      pricingGrid.innerHTML = packages.map(renderPricingCard).join('');
+      rebuildOptgroup('optgroup-packages', packages);
+    }
+    if (memberships.length > 0) {
+      vipGrid.innerHTML = memberships.map(renderVipCard).join('');
+      rebuildOptgroup('optgroup-membership', memberships.map((m) => ({ name: m.name, price: m.price, period: m.period || '/month' })));
+    }
+  } catch (err) {
+    console.warn('Could not load packages from Supabase:', err.message);
+  }
+}
+loadPackagesFromSupabase();
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');

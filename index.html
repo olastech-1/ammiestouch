@@ -543,23 +543,17 @@
     </div>
 
     <div class="pin-grid" id="results-gallery">
-      <div class="pin-item" data-reveal>
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Client nail result" loading="lazy" data-lightbox>
+      <div class="pin-item pin-tall" data-reveal>
+        <img src="images/nail-result-1.jpeg" alt="Nude almond nails with leopard print accent and heart line art" loading="lazy" data-lightbox>
       </div>
       <div class="pin-item pin-tall" data-reveal data-reveal-delay="60">
-        <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=500&q=80" alt="Client braiding result" loading="lazy" data-lightbox>
+        <img src="images/nail-result-2.jpeg" alt="Long stiletto nails with pastel abstract swirl design" loading="lazy" data-lightbox>
       </div>
-      <div class="pin-item" data-reveal data-reveal-delay="120">
-        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&q=80" alt="Client nail set result" loading="lazy" data-lightbox>
+      <div class="pin-item pin-tall" data-reveal data-reveal-delay="120">
+        <img src="images/nail-result-3.jpeg" alt="Nude nails with 3D bow charms and leopard tips" loading="lazy" data-lightbox>
       </div>
       <div class="pin-item pin-tall" data-reveal data-reveal-delay="180">
-        <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=500&q=80" alt="Client braiding style result" loading="lazy" data-lightbox>
-      </div>
-      <div class="pin-item" data-reveal>
-        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80" alt="Client braid result" loading="lazy" data-lightbox>
-      </div>
-      <div class="pin-item" data-reveal data-reveal-delay="60">
-        <img src="https://images.unsplash.com/photo-1632344004505-119e5f5ad6a8?w=500&q=80" alt="Client nail result" loading="lazy" data-lightbox>
+        <img src="images/nail-result-4.jpeg" alt="Nude nails with deep red French tips and star charms" loading="lazy" data-lightbox>
       </div>
     </div>
     <p class="gallery-note" id="gallery-note">More photos added regularly by Ammie ✦</p>
@@ -614,7 +608,7 @@
       <p class="section-desc">Choose the package that suits your occasion, or book services individually.</p>
     </div>
 
-    <div class="pricing-grid">
+    <div class="pricing-grid" id="pricing-grid">
 
       <div class="pricing-card" data-reveal>
         <h3 class="pricing-name">Essentials</h3>
@@ -669,7 +663,7 @@
       <p class="section-desc">Join the VIP list for priority booking, member-only pricing and exclusive perks.</p>
     </div>
 
-    <div class="vip-grid">
+    <div class="vip-grid" id="vip-grid">
 
       <div class="vip-card" data-reveal>
         <h3 class="vip-name">Gold Member</h3>
@@ -993,7 +987,7 @@
           <label for="service">Service</label>
           <select id="service" name="service" required>
             <option value="">Select a service</option>
-            <optgroup label="Nails">
+            <optgroup label="Nails" id="optgroup-nails">
               <option value="Rose Gold Chrome Set" data-price="15000">Rose Gold Chrome Set — ₦15,000</option>
               <option value="Nude Almond Acrylics" data-price="20000">Nude Almond Acrylics — ₦20,000</option>
               <option value="Champagne Gloss Gel" data-price="12000">Champagne Gloss Gel — ₦12,000</option>
@@ -1001,7 +995,7 @@
               <option value="Nail Repair &amp; Care" data-price="6000">Nail Repair &amp; Care — ₦6,000</option>
               <option value="Statement Coffin Set" data-price="22000">Statement Coffin Set — ₦22,000</option>
             </optgroup>
-            <optgroup label="Braiding">
+            <optgroup label="Braiding" id="optgroup-braiding">
               <option value="Knotless Box Braids" data-price="25000">Knotless Box Braids — ₦25,000</option>
               <option value="Cornrows (Straight Back)" data-price="10000">Cornrows (Straight Back) — ₦10,000</option>
               <option value="Feed-in Braids" data-price="15000">Feed-In Braids — ₦15,000</option>
@@ -1009,12 +1003,12 @@
               <option value="Braided Updo" data-price="12000">Braided Updo — ₦12,000</option>
               <option value="Boho Braids with Curls" data-price="28000">Boho Braids with Curls — ₦28,000</option>
             </optgroup>
-            <optgroup label="Packages">
+            <optgroup label="Packages" id="optgroup-packages">
               <option value="Essentials Package" data-price="15000">Essentials Package — ₦15,000</option>
               <option value="Signature Package" data-price="45000">Signature Package — ₦45,000</option>
               <option value="Braid &amp; Glam Package" data-price="60000">Braid &amp; Glam Package — ₦60,000</option>
             </optgroup>
-            <optgroup label="Membership">
+            <optgroup label="Membership" id="optgroup-membership">
               <option value="Gold Membership" data-price="20000">Gold Membership — ₦20,000/mo</option>
               <option value="Platinum Membership" data-price="35000">Platinum Membership — ₦35,000/mo</option>
               <option value="Diamond Membership" data-price="55000">Diamond Membership — ₦55,000/mo</option>
@@ -1290,7 +1284,7 @@
   <img src="" alt="" id="lightbox-img">
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="supabase-config.js"></script>
 <script src="script.js"></script>
 </body>
